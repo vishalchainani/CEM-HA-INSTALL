@@ -1,0 +1,36 @@
+---
+user_command_volumes:
+    - /opt/software/appformix:/opt/software/appformix
+command_servers:
+    server1:
+        ip: 10.98.46.21
+        connection: ssh
+        ssh_user: root
+        ssh_pass: King@123
+        sudo_pass: King@123
+        ntpserver: 10.98.46.33
+        registry_insecure: true
+        container_registry: 10.98.46.36:5000
+        container_name: contrail-command
+        container_tag: latest
+        config_dir: /etc/contrail
+
+        # contrail command container configurations given here go to /etc/contrail/contrail.yml
+        contrail_config:
+            # Database configuration. MySQL/PostgreSQL supported
+            database:
+                type: postgres
+                dialect: postgres
+                password: c0ntrail123
+
+            # Keystone configuration
+            keystone:
+                assignment:
+                    data:
+                      users:
+                        admin:
+                          id: admin
+                          password: c0ntrail123
+            insecure: true
+            client:
+              password: c0ntrail123
