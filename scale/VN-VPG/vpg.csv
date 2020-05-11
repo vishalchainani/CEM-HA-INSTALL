@@ -1,0 +1,3 @@
+vlan,vlan_type,vn_name,vpg_name,switch_name,interfaces
+300,untagged,vn_test_100,vpg_test_12,vqfx10k_leaf1 vqfx10k_leaf2,xe-0/0/7 xe-0/0/7
+320,tagged,vn_test_200,vpg_test_12,vqfx10k_leaf1 vqfx10k_leaf2,xe-0/0/7 xe-0/0/7
