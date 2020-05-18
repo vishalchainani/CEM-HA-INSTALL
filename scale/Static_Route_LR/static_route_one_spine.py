@@ -34,7 +34,7 @@ def get_token():
         return resp.headers['X-Subject-Token']
 
 def get_uuid_href(name, element):
-	token=get_token()
+    token=get_token()
     headers = {'Content-Type': 'application/json', 'X-Auth-Token': token}
     url=api_url+element
     resp=requests.get(url, headers=headers)
@@ -86,14 +86,14 @@ def create_ce_interface(static_route_prefix):
 	params['interface-route-table']['fq_name'][2]=ce_intf_name
 	params['interface-route-table']['interface_route_table_routes']['route'][0]['prefix']=static_route_prefix
 	token=get_token()
-    headers = {'Content-Type': 'application/json', 'X-Auth-Token': token}
-    url_intf_route_table=api_url+'interface-route-tables'
-    resp=requests.post(url_intf_route_table, headers=headers, json=params)
-    output=resp.json()
-    temp_dict['name']=output['interface-route-table']['name']
-    temp_dict['uuid']=output['interface-route-table']['uuid']
-    temp_dict['href']=output['interface-route-table']['href']
-    return temp_dict
+        headers = {'Content-Type': 'application/json', 'X-Auth-Token': token}
+        url_intf_route_table=api_url+'interface-route-tables'
+        resp=requests.post(url_intf_route_table, headers=headers, json=params)
+        output=resp.json()
+        temp_dict['name']=output['interface-route-table']['name']
+        temp_dict['uuid']=output['interface-route-table']['uuid']
+        temp_dict['href']=output['interface-route-table']['href']
+        return temp_dict
 
 def create_vmi(static_route_name, static_route_href, static_route_uuid, vn_name, vn_href, vn_uuid):
         params={
