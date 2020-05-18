@@ -236,5 +236,42 @@ EOF
 
 curl -X POST -H "X-Auth-Token: ec646c9e3faa4842a51b6d187c999ee2" -H "Content-Type: application/json; charset=UTF-8" -d @vpg_native_vn http://10.1.1.3:8082/virtual-machine-interfaces
 ```
+6. Create a static route
+
+```
+cat << EOF > /static_route
+{
+  "interface-route-table": {
+    "display_name": "ce_loopback",
+    "fq_name": [
+      "default-domain",
+      "admin",
+      "ce_loopback"
+    ],
+    "parent_type": "project",
+    "interface_route_table_routes": {
+      "route": [
+        {
+          "prefix": "1.2.3.4/32",
+          "community_attributes": {
+            "community_attribute": [
+              "no-reoriginate"
+            ]
+          }
+        }
+      ]
+    },
+    "perms2": {
+      "owner_access": 7,
+      "global_access": 0,
+      "share": []
+    },
+    "tag_refs": []
+  }
+}
+EOF
+
+curl -X POST -H  "X-Auth-Token: 22cb7190991b425884437a387adff433" -H "Content-Type: application/json; charset=UTF-8" -d @static_route http://10.1.1.3:8082/interface-route-tables
+```
 
 
