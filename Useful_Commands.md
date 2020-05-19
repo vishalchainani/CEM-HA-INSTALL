@@ -22,4 +22,19 @@ Edit jinja2 template of `dnsmasq.conf1` file at below location within `config_de
 
 `vi /opt/contrail/fabric_ansible_playbooks/roles/ztp_dhcp_config/templates/dsnmasq.conf.j2`
 
-Copy the below lines after
+Copy the below lines after `dhcp-option=tag:jn,encap:43,3,"tftp"`
+
+```
+dhcp-host=d8:18:d3:61:4a:61,10.98.46.2 
+dhcp-host=88:d9:8f:7d:8b:61,10.98.46.3 
+dhcp-host=78:50:7c:99:68:0a,10.98.46.5 
+dhcp-host=78:50:7c:99:d8:0a,10.98.46.6 
+dhcp-host=78:50:7c:e3:c8:85,10.98.46.7 
+dhcp-host=78:50:7c:e4:db:85,10.98.46.8 
+dhcp-host=78:50:7c:e4:c7:85,10.98.46.9 
+dhcp-host=78:50:7c:e3:f5:85,10.98.46.10 
+dhcp-host=78:50:7c:e3:ff:85,10.98.46.11 
+dhcp-host=78:50:7c:e4:b3:85,10.98.46.12 
+dhcp-host=78:50:7c:e3:96:85,10.98.46.13 
+dhcp-host=78:50:7c:e4:18:85,10.98.46.14
+```
