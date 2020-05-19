@@ -7,7 +7,7 @@ cat << EOF > /auth
         "scope": {
             "project": {
                 "domain": {"id": "default"},
-                "name": "$tenant"
+                "name": "admin"
             }
         },
         "identity": {
