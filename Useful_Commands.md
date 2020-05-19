@@ -38,3 +38,7 @@ dhcp-host=78:50:7c:e4:b3:85,10.98.46.12
 dhcp-host=78:50:7c:e3:96:85,10.98.46.13 
 dhcp-host=78:50:7c:e4:18:85,10.98.46.14
 ```
+
+6. To check the fabric provisioning logs, look at below file on all the controller node(s)
+
+` tail -f /var/log/contrail/contrail-fabric-ansible-playbooks.log`
