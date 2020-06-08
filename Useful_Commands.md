@@ -20,7 +20,7 @@
 
 Edit jinja2 template of `dnsmasq.conf1` file at below location within `config_device_manager_1` docker on all the control nodes.
 
-`vi /opt/contrail/fabric_ansible_playbooks/roles/ztp_dhcp_config/templates/dsnmasq.conf.j2`
+`vi /opt/contrail/fabric_ansible_playbooks/roles/ztp_dhcp_config/templates/dnsmasq.conf.j2`
 
 Copy the below lines after `dhcp-option=tag:jn,encap:43,3,"tftp"`
 
