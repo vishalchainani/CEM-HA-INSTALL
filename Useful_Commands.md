@@ -45,9 +45,9 @@ dhcp-host=78:50:7c:e4:18:85,10.98.46.14
 
 7. To copy vnc_api module from config_api_1 container
 
-'''
+```
 mkdir -p sandbox
 cd sandbox
 docker cp d54ded9652df:/usr/lib/python2.7/site-packages/vnc_api ./
 docker cp d54ded9652df:/usr/lib/python2.7/site-packages/cfgm_common ./
-'''
+```
